@@ -1,0 +1,45 @@
+/////////// CMR SPECIFIC CODE FOR TESTING PURPOSES //////////       
+ /* matcher = pattern.matcher(line);  //searching each line for defined pattern (cmr bug only)
+         Matcher matcher1 = pattern1.matcher(line);
+         boolean found = false;
+                    
+	            while (matcher.find()) {
+                        matcher1group = null;
+                         multflg = false;
+                        mfind = matcher.group();
+                        
+	                System.out.println("I found the text '" +
+	                    matcher.group()+ "' starting at index " + matcher.start() +
+	                    " and ending at index " + matcher.end());
+	                 
+	                found = true;
+                        while(matcher1.find())
+                    {
+                        matcher1group= matcher1.group();
+                        multflg = true;
+                        System.out.println("I found the text with digits '" +
+	                    matcher1.group()+ "' starting at index " + matcher1.start() +
+	                    " and ending at index " + matcher1.end());
+                    }
+                    }
+                    if (found){
+                        bugpresent = true;
+                        bugCount = bugCount+1;
+                        imr_bug = true;
+                        String bugfix = analysebug(mfind);
+                        String replacement;
+                        //for now until data base structure is set
+                        
+                        if(multflg=false)
+                        {   
+                            
+                            replacement = matcher.replaceAll(bugfix) + matcher1.replaceAll(matcher1group + ")");
+                        }
+                        else
+                        {
+                            replacement = matcher.replaceAll(bugfix +"*101)");
+                        }
+                       
+                         System.out.println("send to fix" );   
+                         
+                         Fixline(lines, linepos, replacement);*/
